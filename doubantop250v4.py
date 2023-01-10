@@ -3,7 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import pandas as pd
-from termcolor import colored
 
 
 headers = {
@@ -34,7 +33,7 @@ def get_data(pages):
                     data.append([movie, year, score, votes, comment])
                     
                     # 爬取电影的时候，终端提示信息
-                    print(f'成功爬取第{str(len(data)).zfill(3)}部电影:({score}分) {movie} （{comment}）')
+                    print(f'成功爬取第{str(len(data)).zfill(3)}部电影:「豆瓣{score}--{movie}」 {comment}')
             else:
                 raise ValueError(f"Error: Could not fetch the page, status code is {response.status_code}")
         except Exception as e:
