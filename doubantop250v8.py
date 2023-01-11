@@ -1,9 +1,10 @@
 # 这是一个爬取豆瓣Top250列表页的爬虫代码，基本信息获取准确，但是导演、主演、制片国家/地区是一个代码块，只能粗略获取。
 # 有问题可以联系zhbityangjian@gmail.com
+
 # 系统库
 import os # 提供了不少与操作系统相关联的函数
 
-# 第三方库
+# 第三方库（需要自行安装）
 import requests # 用来发送 HTTP 请求
 from bs4 import BeautifulSoup # 用来解析 HTML 和 XML 文档
 import re # 提供正则表达式相关操作
